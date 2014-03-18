@@ -39,8 +39,11 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Configuration scripts
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/init.st-ericsson.device.rc:root/init.st-ericsson.device.rc \
-   device/sony/montblanc-common/prebuilt/logo-480x854.rle:root/logo.rle
+   device/sony/pepper/prebuilt/logo-480x854.rle:root/logo.rle
 
+#charging animation
+$(call inherit-product, device/sony/pepper/prebuilt/resources-480x854.mk)
+ 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/dash.conf:system/etc/dash.conf \
