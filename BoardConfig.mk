@@ -15,7 +15,7 @@ BOARD_KERNEL_CMDLINE := cachepolicy=writealloc noinitrd init=init board_id=1 log
 BOARD_HAS_SDCARD_INTERNAL := true
 
 # Specific flag for LED bar notification
-COMMON_GLOBAL_CFLAGS += -DNEW_NOTIFICATION -DSECOND_NOTIFICATION
+COMMON_GLOBAL_CFLAGS += -DNEW_NOTIFICATION
 
 # Device identifiers for updates
 TARGET_OTA_ASSERT_DEVICE := MT27i,MT27a,pepper
