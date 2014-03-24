@@ -26,14 +26,14 @@
 PRODUCT_PACKAGES := \
     Torch
 
-# Inherit from those products. Most specific first.
+# Inherit from AOSP.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
-# Inherit from pepper device
+# Inherit from device
 $(call inherit-product, device/sony/pepper/pepper.mk)
 
-# Set those variables here to overwrite the inherited values.
+# Set correct device information.
 PRODUCT_NAME := full_pepper
 PRODUCT_DEVICE := pepper
 PRODUCT_BRAND := Sony
