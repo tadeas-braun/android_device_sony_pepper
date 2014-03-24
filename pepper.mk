@@ -115,5 +115,5 @@ ste.video.decoder.h264.max.lev=3.2
 ro.hwui.texture_cache_size=10
 ro.hwui.layer_cache_size=8
 ro.hwui.path_cache_size=2
-ro.sf.lcd_density=280
+ro.sf.lcd_density=265
 ro.config.low_ram=true
