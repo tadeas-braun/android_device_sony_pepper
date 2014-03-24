@@ -80,3 +80,40 @@ PRODUCT_COPY_FILES += \
 # Note: In PRODUCT_AAPT_PREF_CONFIG set the proper one (e.g. hdpi), in PRODUCT_AAPT_CONFIG set the proper one and the previous one (e.g. mdpi)
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_AAPT_CONFIG := mdpi hdpi
+
+
+# Android kind of memory
+ro.build.characteristics=nosdcard
+
+
+# PC Companion kind of memory
+ro.semc.product.user_storage=emmc_only
+
+
+# NFC
+ro.nfc.on.default=false
+ro.nfc.se.sim.enable=true
+ro.nfc.se.smx.enable=false
+ro.nfc.icon.enable=true
+ro.nfc.vendor.name=nxp
+
+
+# Hardware video codecs configuration
+ste.video.dec.mpeg4.in.size=8192
+ste.video.enc.out.buffercnt=5
+ste.video.dec.recycle.delay=1
+ste.video.decoder.max.hwmem=0x2600000
+ste.video.decoder.max.res=720p
+ste.video.decoder.h264.max.lev=3.2
+
+
+# Device specific proprieties
+# References: 
+# - http://source.android.com/devices/tuning.html
+# - http://en.wikipedia.org/wiki/Pixel_density#Calculation_of_monitor_PPI
+# - https://source.android.com/devices/low-ram.html
+ro.hwui.texture_cache_size=10
+ro.hwui.layer_cache_size=8
+ro.hwui.path_cache_size=2
+ro.sf.lcd_density=280
+ro.config.low_ram=true
