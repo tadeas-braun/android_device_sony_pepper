@@ -56,11 +56,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/logo-480x854.rle:root/logo.rle
 $(call inherit-product, device/sony/pepper/prebuilt/resources-480x854.mk)
 
-
-# Device specific recovery bootstrap scripts
+#TWRP
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/config/bootrec-device:root/sbin/bootrec-device
-
+$(LOCAL_PATH)/config/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Device specific USB configuration script
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/config/init.st-ericsson.usb.rc:root/init.st-ericsson.usb.rc
@@ -72,7 +70,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/config/cyttsp-spi.kl:system/usr/keylayout/cyttsp-spi.kl \
 	$(LOCAL_PATH)/config/cyttsp-spi.idc:system/usr/idc/cyttsp-spi.idc \
 	$(LOCAL_PATH)/config/so34-buttons.kl:system/usr/keylayout/so34-buttons.kl \
-	$(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl
+	$(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl \
+	$(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl \ $(LOCAL_PATH)/config/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl
 
 
 # Device specific display resolutions
