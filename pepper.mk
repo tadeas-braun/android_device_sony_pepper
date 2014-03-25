@@ -112,8 +112,8 @@ ste.video.decoder.h264.max.lev=3.2
 # - http://source.android.com/devices/tuning.html
 # - http://en.wikipedia.org/wiki/Pixel_density#Calculation_of_monitor_PPI
 # - https://source.android.com/devices/low-ram.html
-ro.hwui.texture_cache_size=10
-ro.hwui.layer_cache_size=8
+ro.hwui.texture_cache_size=9
+ro.hwui.layer_cache_size=7
 ro.hwui.path_cache_size=2
 ro.sf.lcd_density=265
 ro.config.low_ram=true
