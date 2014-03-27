@@ -14,6 +14,10 @@ $(call inherit-product-if-exists, vendor/sony/pepper/pepper-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/sony/pepper/overlay
 
 
+# Device specific headers
+TARGET_SPECIFIC_HEADER_PATH += device/sony/pepper/include
+ 
+ 
 # NFC Support
 PRODUCT_PACKAGES += \
     libnfc \
