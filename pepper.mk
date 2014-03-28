@@ -14,6 +14,10 @@ $(call inherit-product-if-exists, vendor/sony/pepper/pepper-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/sony/pepper/overlay
 
 
+# Device specific headers
+TARGET_SPECIFIC_HEADER_PATH += device/sony/pepper/include
+ 
+ 
 # NFC Support
 PRODUCT_PACKAGES += \
     libnfc \
@@ -56,11 +60,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/logo-480x854.rle:root/logo.rle
 $(call inherit-product, device/sony/pepper/prebuilt/resources-480x854.mk)
 
-
-# Device specific recovery bootstrap scripts
+#TWRP
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/config/bootrec-device:root/sbin/bootrec-device
-
+$(LOCAL_PATH)/config/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Device specific USB configuration script
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/config/init.st-ericsson.usb.rc:root/init.st-ericsson.usb.rc
@@ -72,7 +74,9 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/config/cyttsp-spi.kl:system/usr/keylayout/cyttsp-spi.kl \
 	$(LOCAL_PATH)/config/cyttsp-spi.idc:system/usr/idc/cyttsp-spi.idc \
 	$(LOCAL_PATH)/config/so34-buttons.kl:system/usr/keylayout/so34-buttons.kl \
-	$(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl
+	$(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl \
+	$(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl \
+	$(LOCAL_PATH)/config/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl
 
 
 # Device specific display resolutions
@@ -80,3 +84,41 @@ PRODUCT_COPY_FILES += \
 # Note: In PRODUCT_AAPT_PREF_CONFIG set the proper one (e.g. hdpi), in PRODUCT_AAPT_CONFIG set the proper one and the previous one (e.g. mdpi)
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_AAPT_CONFIG := mdpi hdpi
+
+
+# Android kind of memory
+ro.build.characteristics=nosdcard
+
+
+# PC Companion kind of memory
+ro.semc.product.user_storage=emmc_only
+
+
+# NFC
+ro.nfc.on.default=false
+ro.nfc.se.sim.enable=true
+ro.nfc.se.smx.enable=false
+ro.nfc.icon.enable=true
+ro.nfc.vendor.name=nxp
+
+
+# Hardware video codecs configuration
+ste.video.dec.mpeg4.in.size=8192
+ste.video.enc.out.buffercnt=5
+ste.video.dec.recycle.delay=1
+ste.video.decoder.max.hwmem=0x2600000
+ste.video.decoder.max.res=720p
+ste.video.decoder.h264.max.lev=3.2
+
+
+# Device specific proprieties
+# References: 
+# - http://source.android.com/devices/tuning.html
+# - http://en.wikipedia.org/wiki/Pixel_density#Calculation_of_monitor_PPI
+# - https://source.android.com/devices/low-ram.html
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.hwui.texture_cache_size=9 \
+	ro.hwui.layer_cache_size=7 \
+	ro.hwui.path_cache_size=2 \
+	ro.sf.lcd_density=265 \
+	ro.config.low_ram=true
