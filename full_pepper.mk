@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Android Open Source Project
+# Copyright (C) 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,12 +26,14 @@
 PRODUCT_PACKAGES := \
     Torch
 
+
 # Inherit from AOSP.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 # Inherit from device
 $(call inherit-product, device/sony/pepper/pepper.mk)
+
 
 # Set correct device information.
 PRODUCT_NAME := full_pepper
