@@ -44,16 +44,16 @@ PRODUCT_COPY_FILES += \
 
 # Device specific configuration scripts
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/config/init.st-ericsson.device.rc:root/init.st-ericsson.device.rc \
-	$(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
+        $(LOCAL_PATH)/config/init.st-ericsson.device.rc:root/init.st-ericsson.device.rc \
+        $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
 
 
 # Device specific hardware configuration scripts
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/config/dash.conf:system/etc/dash.conf \
-	$(LOCAL_PATH)/prebuilt/hw_config.sh:system/etc/hw_config.sh \
-	$(LOCAL_PATH)/config/cflashlib.cfg:system/etc/cflashlib.cfg \
-	$(LOCAL_PATH)/config/flashled_param_config.cfg:system/etc/flashled_param_config.cfg
+        $(LOCAL_PATH)/config/dash.conf:system/etc/dash.conf \
+        $(LOCAL_PATH)/prebuilt/hw_config.sh:system/etc/hw_config.sh \
+        $(LOCAL_PATH)/config/cflashlib.cfg:system/etc/cflashlib.cfg \
+        $(LOCAL_PATH)/config/flashled_param_config.cfg:system/etc/flashled_param_config.cfg
 
 
 # Device specific bootlogo and charging animation
@@ -72,13 +72,13 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/config/init.st-ericsson.usb.rc:root/init.st-
 
 # Device specific keylayouts and touchscreen configurations files
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/config/AB8500_Hs_Button.kl:system/usr/keylayout/AB8500_Hs_Button.kl \
-	$(LOCAL_PATH)/config/cyttsp-spi.kl:system/usr/keylayout/cyttsp-spi.kl \
-	$(LOCAL_PATH)/config/cyttsp-spi.idc:system/usr/idc/cyttsp-spi.idc \
-	$(LOCAL_PATH)/config/so34-buttons.kl:system/usr/keylayout/so34-buttons.kl \
-	$(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl \
-	$(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl \
-	$(LOCAL_PATH)/config/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl
+        $(LOCAL_PATH)/config/AB8500_Hs_Button.kl:system/usr/keylayout/AB8500_Hs_Button.kl \
+        $(LOCAL_PATH)/config/cyttsp-spi.kl:system/usr/keylayout/cyttsp-spi.kl \
+        $(LOCAL_PATH)/config/cyttsp-spi.idc:system/usr/idc/cyttsp-spi.idc \
+        $(LOCAL_PATH)/config/so34-buttons.kl:system/usr/keylayout/so34-buttons.kl \
+        $(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl \
+        $(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl \
+        $(LOCAL_PATH)/config/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl
 
 
 # Device specific display resolutions
@@ -119,8 +119,8 @@ ste.video.decoder.h264.max.lev=3.2
 # - http://en.wikipedia.org/wiki/Pixel_density#Calculation_of_monitor_PPI
 # - https://source.android.com/devices/low-ram.html
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.hwui.texture_cache_size=9 \
-	ro.hwui.layer_cache_size=7 \
-	ro.hwui.path_cache_size=2 \
-	ro.sf.lcd_density=240 \
-	ro.config.low_ram=true
+        ro.hwui.texture_cache_size=9 \
+        ro.hwui.layer_cache_size=7 \
+        ro.hwui.path_cache_size=2 \
+        ro.sf.lcd_density=240 \
+        ro.config.low_ram=true
