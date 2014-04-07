@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/logo-480x854.rle:root/logo.rle \
 	$(LOCAL_PATH)/prebuilt/bootanimation.zip:system/media/bootanimation.zip
-$(call inherit-product, device/sony/pepper/prebuilt/resources-480x854.mk)
+$(call inherit-product, $(LOCAL_PATH)/prebuilt/resources-480x854.mk)
 
 #TWRP
 PRODUCT_COPY_FILES += \
