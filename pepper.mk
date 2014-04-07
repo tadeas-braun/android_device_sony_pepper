@@ -57,8 +57,10 @@ PRODUCT_COPY_FILES += \
 
 
 # Device specific bootlogo and charging animation
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/logo-480x854.rle:root/logo.rle
-$(call inherit-product, device/sony/pepper/prebuilt/resources-480x854.mk)
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/logo-480x854.rle:root/logo.rle \
+	$(LOCAL_PATH)/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+$(call inherit-product, $(LOCAL_PATH)/prebuilt/resources-480x854.mk)
 
 
 #TWRP
