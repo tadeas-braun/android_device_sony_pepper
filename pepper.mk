@@ -89,28 +89,30 @@ PRODUCT_AAPT_CONFIG := mdpi hdpi
 
 
 # Android kind of memory
-ro.build.characteristics=nosdcard
+PRODUCT_PROPERTY_OVERRIDES += ro.build.characteristics=nosdcard
 
 
 # PC Companion kind of memory
-ro.semc.product.user_storage=emmc_only
+PRODUCT_PROPERTY_OVERRIDES += ro.semc.product.user_storage=emmc_only
 
 
 # NFC
-ro.nfc.on.default=false
-ro.nfc.se.sim.enable=true
-ro.nfc.se.smx.enable=false
-ro.nfc.icon.enable=true
-ro.nfc.vendor.name=nxp
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.nfc.on.default=false \
+        ro.nfc.se.sim.enable=true \
+        ro.nfc.se.smx.enable=false \
+        ro.nfc.icon.enable=true \
+        ro.nfc.vendor.name=nxp
 
 
 # Hardware video codecs configuration
-ste.video.dec.mpeg4.in.size=8192
-ste.video.enc.out.buffercnt=5
-ste.video.dec.recycle.delay=1
-ste.video.decoder.max.hwmem=0x2600000
-ste.video.decoder.max.res=720p
-ste.video.decoder.h264.max.lev=3.2
+PRODUCT_PROPERTY_OVERRIDES += \
+        ste.video.dec.mpeg4.in.size=8192 \
+        ste.video.enc.out.buffercnt=5 \
+        ste.video.dec.recycle.delay=1 \
+        ste.video.decoder.max.hwmem=0x2600000 \
+        ste.video.decoder.max.res=720p \
+        ste.video.decoder.h264.max.lev=3.2
 
 
 # Device specific proprieties
