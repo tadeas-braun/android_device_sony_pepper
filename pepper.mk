@@ -73,9 +73,8 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/config/init.st-ericsson.usb.rc:root/init.st-
 # Device specific keylayouts and touchscreen configurations files
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/config/AB8500_Hs_Button.kl:system/usr/keylayout/AB8500_Hs_Button.kl \
-        $(LOCAL_PATH)/config/cyttsp-spi.kl:system/usr/keylayout/cyttsp-spi.kl \
+        $(LOCAL_PATH)/config/cyttsp-spi.kl:system/usr/keylayout/cyttsp_key.kl \
         $(LOCAL_PATH)/config/cyttsp-spi.idc:system/usr/idc/cyttsp-spi.idc \
-        $(LOCAL_PATH)/config/so34-buttons.kl:system/usr/keylayout/so34-buttons.kl \
         $(LOCAL_PATH)/config/ux500-ske-keypad.kl:system/usr/keylayout/ux500-ske-keypad.kl \
         $(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl \
         $(LOCAL_PATH)/config/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl
