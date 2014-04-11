@@ -22,9 +22,6 @@
 #
 #
  
-# Torch
-PRODUCT_PACKAGES := \
-    Torch
 
 
 # Inherit from AOSP.
