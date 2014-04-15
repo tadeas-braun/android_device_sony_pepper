@@ -7,7 +7,7 @@
 
 
 # Platform specific headers
-TARGET_SPECIFIC_HEADER_PATH += device/sony/pepper/include
+TARGET_SPECIFIC_HEADER_PATH := device/sony/pepper/include
 
 
 # Kernel specific configurations
