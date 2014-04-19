@@ -10,6 +10,7 @@ char const*const LED_FILE_TRIGGER[] = {
 
 char const*const BUTTON_BACKLIGHT_FILE[] = {
  "/sys/class/leds/button-backlight/brightness",
+ "/sys/class/leds/keyboard-backlight/brightness",
 };
 
 char const*const LED_FILE_PATTERN = "/sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/pattern_data";
