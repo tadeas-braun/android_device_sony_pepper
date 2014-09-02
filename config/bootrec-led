@@ -2,7 +2,7 @@
 
 # Reset LEDs
 busybox echo '0' > /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/red/brightness
-busybox echo '0' > /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/green/brightnes
+busybox echo '0' > /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/green/brightness
 busybox echo '0' > /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/blue/brightness
 busybox echo '0' > /sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/button-backlight/brightness
 
